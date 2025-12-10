@@ -1,0 +1,38 @@
+services:
+  db:
+    image: postgres:16-alpine
+    container_name: tarefas-db-compose
+    environment:
+      POSTGRES_USER: ${DB_USER}
+      POSTGRES_PASSWORD: ${DB_PASSWORD}
+      POSTGRES_DB: ${DB_NAME}
+    volumes:
+      - pg_data_novo:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+
+  backend:
+    build: ./backend 
+    container_name: tarefas-back
+    ports:
+      - "3000:3000"
+    environment:
+      - DB_USER=${DB_USER}
+      - DB_PASSWORD=${DB_PASSWORD}
+      - DB_NAME=${DB_NAME}
+      - DB_HOST=${DB_HOST}
+      - DB_PORT=${DB_PORT}
+      - SERVER_PORT=${SERVER_PORT}
+    depends_on:
+      - db
+
+  frontend:
+    build: ./frontend
+    container_name: tarefas-front
+    ports:
+      - "8080:80"
+    depends_on:
+      - backend
+
+volumes:
+  pg_data_novo:

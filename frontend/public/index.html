@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarefólio</title>
+    <link rel="stylesheet" href="styles.css">
+    
+</head>
+<body>
+    <header>
+        <h1>Gerenciamento de Tarefas</h1>
+    </header>
+
+    <main>
+        <section id="criar">
+            <button id="btn-abrir-form"> Criar Tarefa +</button>
+            <div id="form-container" class="escondido">
+                <input type="text" id="input-titulo" placeholder="Título da tarefa">
+                <textarea id="input-descricao" placeholder="descrição da tarefa"></textarea>
+
+                <div class="acoes-form">
+                    <button onclick="salvarTarefa()">Salvar</button>
+                    <button onclick="cancelarCriacao()">Cancelar</button>
+                </div>
+            </div>
+        </section>
+
+        <hr>
+
+        <ul id="lista-tarefas">
+
+        </ul>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

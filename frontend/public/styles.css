@@ -1,0 +1,192 @@
+.escondido {
+    display:none
+}
+
+.concluida {
+    background-color: #d4edda !important;
+    border-left: 5px solid #28a745;
+    color: #155724;
+}
+
+.concluida strong {
+    text-decoration: line-trought;
+    opacity: 0.7;
+}
+
+/* --- 1. CONFIGURAÇÕES GERAIS (Reset) --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Garante que padding não estoure o tamanho */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f0f2f5; /* Cinza bem clarinho (confortável aos olhos) */
+    color: #333;
+    line-height: 1.6;
+}
+
+/* --- 2. CABEÇALHO --- */
+header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); /* Degradê Roxo/Azul */
+    color: white;
+    padding: 2rem;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+header h1 {
+    font-weight: 300;
+    letter-spacing: 1px;
+}
+
+/* --- 3. CONTAINER PRINCIPAL --- */
+main {
+    max-width: 600px; /* Limita a largura para não ficar esticado */
+    margin: 30px auto; /* Centraliza na tela */
+    padding: 0 20px;
+}
+
+/* --- 4. BOTÕES GERAIS --- */
+button {
+    cursor: pointer;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: transform 0.2s, opacity 0.2s; /* Animação suave */
+}
+
+button:active {
+    transform: scale(0.95); /* Efeito de clique */
+}
+
+/* Botão Principal (Criar Tarefa) */
+#btn-abrir-form {
+    width: 100%;
+    background-color: #667eea;
+    color: white;
+    font-size: 1.1rem;
+    padding: 15px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 10px rgba(102, 126, 234, 0.4);
+}
+
+#btn-abrir-form:hover {
+    background-color: #5a6fd1;
+}
+
+/* --- 5. FORMULÁRIO DE CRIAÇÃO --- */
+#form-container {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+    animation: slideDown 0.3s ease-out;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+input:focus, textarea:focus {
+    outline: none;
+    border-color: #764ba2;
+}
+
+.acoes-form {
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end; /* Botões à direita */
+}
+
+/* Botões do Form */
+.acoes-form button:first-child { background-color: #2ecc71; color: white; } /* Salvar (Verde) */
+.acoes-form button:last-child { background-color: #e74c3c; color: white; } /* Cancelar (Vermelho) */
+
+/* --- 6. LISTA DE TAREFAS --- */
+ul {
+    padding-top: 1rem;
+    list-style: none;
+}
+
+li {
+    background: white;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    overflow: hidden; /* Para o filho não sair da borda arredondada */
+    transition: transform 0.2s;
+}
+
+li:hover {
+    transform: translateY(-2px); /* Levanta um pouquinho ao passar o mouse */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* Cabeçalho da Tarefa (Título + Olho) */
+.cabecalho-tarefa {
+    display: flex;
+    justify-content: space-between; /* Título na ponta esquerda, olho na direita */
+    align-items: center;
+    padding: 15px;
+    background-color: #fff;
+    border-bottom: 1px solid transparent;
+}
+
+.cabecalho-tarefa strong {
+    font-size: 1.1rem;
+    color: #444;
+}
+
+.cabecalho-tarefa button {
+    background: transparent;
+    font-size: 1.2rem;
+    padding: 5px;
+    color: #667eea;
+}
+
+/* Detalhes (Descrição + Ações) */
+.detalhes-tarefa {
+    padding: 15px;
+    background-color: #f8f9fa;
+    border-top: 1px solid #eee;
+    animation: fadeIn 0.3s;
+}
+
+.detalhes-tarefa p {
+    color: #666;
+    margin-bottom: 15px;
+    font-size: 0.95rem;
+}
+
+.acoes {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.acoes button:first-child { background-color: #27ae60; color: white; } /* Concluir */
+.acoes button:last-child { background-color: #c0392b; color: white; } /* Excluir */
+
+/* --- 7. UTILITÁRIOS E ANIMAÇÕES --- */
+.escondido {
+    display: none !important;
+}
+
+@keyframes slideDown {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
