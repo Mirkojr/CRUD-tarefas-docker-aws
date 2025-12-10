@@ -13,21 +13,21 @@
     opacity: 0.7;
 }
 
-/* --- 1. CONFIGURAÇÕES GERAIS (Reset) --- */
+/* CONFIGURAÇÕES GERAIS */
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box; /* Garante que padding não estoure o tamanho */
+    box-sizing: border-box; 
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 body {
-    background-color: #f0f2f5; /* Cinza bem clarinho (confortável aos olhos) */
+    background-color: #f0f2f5; /* Cinza bem clarinho */
     color: #333;
     line-height: 1.6;
 }
 
-/* --- 2. CABEÇALHO --- */
+/* CABEÇALHO */
 header {
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); /* Degradê Roxo/Azul */
     color: white;
@@ -41,14 +41,14 @@ header h1 {
     letter-spacing: 1px;
 }
 
-/* --- 3. CONTAINER PRINCIPAL --- */
+/*  CONTAINER PRINCIPAL */
 main {
     max-width: 600px; /* Limita a largura para não ficar esticado */
     margin: 30px auto; /* Centraliza na tela */
     padding: 0 20px;
 }
 
-/* --- 4. BOTÕES GERAIS --- */
+/* BOTÕES GERAIS */
 button {
     cursor: pointer;
     border: none;
@@ -77,7 +77,7 @@ button:active {
     background-color: #5a6fd1;
 }
 
-/* --- 5. FORMULÁRIO DE CRIAÇÃO --- */
+/* FORMULÁRIO DE CRIAÇÃO */
 #form-container {
     background: white;
     padding: 20px;
@@ -111,7 +111,7 @@ input:focus, textarea:focus {
 .acoes-form button:first-child { background-color: #2ecc71; color: white; } /* Salvar (Verde) */
 .acoes-form button:last-child { background-color: #e74c3c; color: white; } /* Cancelar (Vermelho) */
 
-/* --- 6. LISTA DE TAREFAS --- */
+/* LISTA DE TAREFAS */
 ul {
     padding-top: 1rem;
     list-style: none;
@@ -131,10 +131,10 @@ li:hover {
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
 
-/* Cabeçalho da Tarefa (Título + Olho) */
+/* Cabeçalho da Tarefa (titulo + Olho) */
 .cabecalho-tarefa {
     display: flex;
-    justify-content: space-between; /* Título na ponta esquerda, olho na direita */
+    justify-content: space-between; /* titulo na ponta esquerda, olho na direita */
     align-items: center;
     padding: 15px;
     background-color: #fff;
@@ -176,7 +176,7 @@ li:hover {
 .acoes button:first-child { background-color: #27ae60; color: white; } /* Concluir */
 .acoes button:last-child { background-color: #c0392b; color: white; } /* Excluir */
 
-/* --- 7. UTILITÁRIOS E ANIMAÇÕES --- */
+/* 7. UTILITÁRIOS E ANIMAÇÕES */
 .escondido {
     display: none !important;
 }

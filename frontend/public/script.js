@@ -3,7 +3,9 @@ const formContainer = document.getElementById("form-container");
 const tituloInput = document.getElementById('input-titulo');
 const descricaoInput= document.getElementById('input-descricao');
 const listaTarefas = document.getElementById('lista-tarefas');
-const URL_API = 'http://13.220.49.88:3000/tarefas';
+const URL_API = 'http://localhost:3000/tarefas';
+
+//http://13.220.49.88:3000/tarefas
 
 btnAbrir.addEventListener('click', function(){
     formContainer.classList.remove("escondido");
