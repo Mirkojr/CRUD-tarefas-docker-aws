@@ -2,7 +2,7 @@
 
 Aplicação web para gerenciamento de tarefas (CRUD), desenvolvida com foco em containerização, orquestração de serviços e deploy em ambiente cloud (AWS).
 
-O objetivo principal do projeto foi estruturar uma arquitetura completa de microserviços, isolando frontend, backend e banco de dados em containers, garantindo consistência entre o ambiente de desenvolvimento e produção.
+O objetivo principal do projeto foi estruturar uma arquitetura completa de microserviços, isolando frontend, backend e banco de dados em containers.
 
 ## Tecnologias Utilizadas
 
