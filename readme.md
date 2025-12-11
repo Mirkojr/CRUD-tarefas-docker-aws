@@ -100,13 +100,3 @@ O projeto roda sobre três containers orquestrados via Docker Compose:
 9. Acesse a aplicação via navegador usando o IP público da instância EC2:
     http://SEU_IP_PUBLICO:8080
 
-## Estrutura do Projeto
-.
-├── backend/            # Código fonte da API Node.js
-│   ├── src/            # Código fonte
-│   ├── Dockerfile      # Configuração da imagem Node.js
-├── frontend/
-│   ├── public/         # Arquivos estáticos (HTML, CSS, JS)
-│   └── Dockerfile      # Configuração da imagem Nginx
-├── docker-compose.yml  # Orquestração dos serviços
-└── README.md
