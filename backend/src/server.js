@@ -1,8 +1,8 @@
-require('dotenv').config();
-const express = require("express")
-const cors = require("cors")
-const { Pool } = require("pg")
-
+import 'dotenv/config';
+import express from 'express';
+import cors from 'cors';
+import pg from 'pg';
+const { Pool } = pg;
 
 const app = express()
 app.use(express.json()) // permitir leitura de json do front
@@ -76,5 +76,5 @@ app.put('/tarefas/:id', async (req, res) => {
 const PORT = process.env.SERVER_PORT || 3000;
 
 app.listen(PORT, () => {
-    console.log(`Servidor rodando na porta ${PORT} 🚀`);
+    console.log(`Servidor rodando na porta ${PORT}!`);
 });

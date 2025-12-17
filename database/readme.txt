@@ -6,7 +6,7 @@ docker exec meus-banco-postgres psql -U postgres
 
 container: tarefa-db
 banco: tarefas_db
-porta: 5432:5432
+porta: 5433:5432
 senha: marcos10
 
 alguns comandos úteis dentro do psql:
